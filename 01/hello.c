@@ -9,8 +9,6 @@ int main(int argc, char** argv) {
 	int i;
 	char *str = "hello, world!", ch;
 	for (i = 0; i < strlen(str); i++)
-		if (i == 2)
-			println("if - break\n");
 		ch = str[i];
 
 	printf("%s\n",str);

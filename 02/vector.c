@@ -53,9 +53,8 @@ void vector_delete(vector_t *v) {
 
 
 
-    /* ADD CODE HERE */
-    free(v->data);
-    free(v);
+	/* ADD CODE HERE */
+
 
 
 
@@ -92,19 +91,8 @@ void vector_set(vector_t *v, size_t loc, int value) {
 
 
 	/* ADD CODE HERE */
-	size_t i;
-	if (loc >= v->size) {
-	    vector_t *newVec = vector_new();
-        newVec->size = loc + 1;
-        for (i = 0; i < v->size; i ++) {
-            int dataAti = vector_get(v, i);
-            vector_set(newVec, i, dataAti);
-        }
-        for (i = v->size; i < loc - 1; i ++) 
-            vector_set(newVec, i, 0);
-        vector_set(newVec, loc, value);
-    }
-	else        //(loc < v->size)
-	    v->data[loc] = value;
+
+
+
 
 }

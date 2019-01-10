@@ -6,8 +6,8 @@ typedef struct node {
 } node;
 
 /* FIXME: this function is buggy. */
-int ll_equal(const node* a, const node* b) { // why const?
-	while (a != NULL && b != NULL) {
+int ll_equal(const node* a, const node* b) {
+	while (a != NULL) {
 		if (a->val != b->val)
 			return 0;
 		a = a->next;
